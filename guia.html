@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 5-Step ATS Checklist for Healthcare Workers — HelyraSpring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1B3B6F; --blue: #2D6EB0; --blue-pale: #EBF4FC;
+      --green: #5BA88A; --green-deep: #3D8A6E; --green-pale: #E6F4EE;
+      --white: #fff; --gray: #6B7280; --text: #1F2937;
+    }
+    body { font-family: 'Inter', sans-serif; background: #F3F7FB; color: var(--text); line-height: 1.7; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    /* TOP BAR */
+    .topbar { background: var(--navy); color: white; text-align: center; padding: 10px 20px; font-size: 0.82rem; font-weight: 600; }
+    .topbar span { color: #A8DFB8; }
+    .logo-bar { background: white; display: flex; justify-content: center; padding: 14px 20px; border-bottom: 1px solid #E5E7EB; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); font-weight: 700; }
+    .logo span { color: var(--green-deep); }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, var(--navy), var(--blue)); color: white; text-align: center; padding: 50px 20px 40px; }
+    .badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 4px 16px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #A8DFB8; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 12px; line-height: 1.25; }
+    .hero p { font-size: 1rem; opacity: 0.82; max-width: 520px; margin: 0 auto; }
+
+    /* GUIDE CONTENT */
+    .guide { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
+
+    /* INTRO BOX */
+    .intro-box { background: white; border-radius: 12px; padding: 28px 32px; margin-bottom: 32px; border-left: 4px solid var(--blue); box-shadow: 0 2px 12px rgba(27,59,111,0.07); }
+    .intro-box p { font-size: 0.97rem; color: var(--text); }
+    .intro-box strong { color: var(--navy); }
+
+    /* STEP CARDS */
+    .step { background: white; border-radius: 12px; padding: 28px 32px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(27,59,111,0.07); }
+    .step-header { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 16px; }
+    .step-num { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--navy), var(--blue)); color: white; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Playfair Display', serif; }
+    .step-title h2 { font-size: 1.2rem; color: var(--navy); margin-bottom: 3px; }
+    .step-title p { font-size: 0.82rem; color: var(--green-deep); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+    .step-body p { font-size: 0.95rem; color: var(--text); margin-bottom: 14px; }
+    .checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; }
+    .check-box { width: 20px; height: 20px; border: 2px solid var(--green-deep); border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+    .tip { background: var(--blue-pale); border-radius: 8px; padding: 12px 16px; margin-top: 14px; font-size: 0.88rem; color: var(--navy); }
+    .tip strong { display: block; margin-bottom: 3px; color: var(--blue); }
+
+    /* KEYWORDS SECTION */
+    .keywords-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
+    .kw-group { background: var(--green-pale); border-radius: 8px; padding: 14px 16px; }
+    .kw-group h4 { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--green-deep); margin-bottom: 10px; }
+    .kw-group ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+    .kw-group li { font-size: 0.88rem; color: var(--text); display: flex; align-items: center; gap: 6px; }
+    .kw-group li::before { content: "•"; color: var(--green-deep); font-weight: 700; }
+
+    /* BONUS */
+    .bonus { background: linear-gradient(135deg, #FFF8E7, #FFF3CC); border: 1.5px solid #F59E0B; border-radius: 12px; padding: 24px 28px; margin-bottom: 20px; }
+    .bonus h3 { color: #92400E; font-size: 1.1rem; margin-bottom: 10px; }
+    .bonus p { font-size: 0.92rem; color: #78350F; margin-bottom: 8px; }
+    .linkedin-tips { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+    .linkedin-tips li { font-size: 0.9rem; display: flex; gap: 8px; align-items: flex-start; }
+    .linkedin-tips li::before { content: "→"; color: #D97706; font-weight: 700; flex-shrink: 0; }
+
+    /* CTA BOX */
+    .cta-box { background: linear-gradient(135deg, var(--navy), var(--blue)); border-radius: 14px; padding: 36px 32px; text-align: center; color: white; margin-top: 32px; }
+    .cta-box h2 { font-size: 1.6rem; margin-bottom: 10px; }
+    .cta-box p { opacity: 0.82; font-size: 0.95rem; margin-bottom: 24px; max-width: 460px; margin-left: auto; margin-right: auto; }
+    .resources { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 28px; text-align: left; }
+    .resource-item { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 0.85rem; display: flex; gap: 8px; align-items: flex-start; }
+    .resource-item::before { content: "✓"; color: #A8DFB8; font-weight: 700; flex-shrink: 0; }
+    .btn-cta { display: inline-block; background: var(--green-deep); color: white; font-weight: 700; font-size: 1.05rem; padding: 15px 36px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.25); transition: background 0.2s, transform 0.15s; }
+    .btn-cta:hover { background: #2e7259; transform: translateY(-2px); }
+    .cta-note { font-size: 0.78rem; opacity: 0.5; margin-top: 12px; }
+
+    /* PRINT */
+    .print-btn { display: block; text-align: center; margin: 24px auto 0; background: none; border: 1.5px solid #D1D5DB; color: var(--gray); padding: 10px 24px; border-radius: 8px; font-size: 0.85rem; cursor: pointer; font-family: inherit; transition: border-color 0.2s; }
+    .print-btn:hover { border-color: var(--navy); color: var(--navy); }
+
+    footer { background: #0F1E2E; color: rgba(255,255,255,0.4); text-align: center; padding: 22px 20px; font-size: 0.8rem; margin-top: 0; }
+
+    @media print {
+      .topbar, .logo-bar, .print-btn, .cta-box, footer { display: none; }
+      .guide { padding: 0; }
+      .step, .intro-box { box-shadow: none; border: 1px solid #E5E7EB; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">Free Resource from <span>HelyraSpring</span> — For Healthcare Workers in the USA</div>
+<div class="logo-bar"><div class="logo">Helyra<span>Spring</span></div></div>
+
+<div class="hero">
+  <div class="badge">Free ATS Guide</div>
+  <h1>The 5-Step ATS Checklist<br>for Healthcare Workers</h1>
+  <p>Everything you need to fix your resume and start getting callbacks — starting today.</p>
+</div>
+
+<div class="guide">
+
+  <div class="intro-box">
+    <p>Over <strong>75% of healthcare resumes</strong> are rejected by Applicant Tracking Systems (ATS) before a human recruiter ever sees them. This guide will walk you through 5 specific steps to make sure your resume passes the filter — and gets in front of real hiring managers.</p>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div class="step-title">
+        <p>Step One</p>
+        <h2>Fix Your Resume Format</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>ATS systems scan your resume as plain text. Creative designs, tables, columns, and graphics are often unreadable — causing your resume to be rejected even if you're perfectly qualified.</p>
+      <ul class="checklist">
+        <li><div class="check-box"></div>Use a single-column layout — no tables or text boxes</li>
+        <li><div class="check-box"></div>Save your resume as .docx or .pdf (check the job posting for preference)</li>
+        <li><div class="check-box"></div>Use standard section headers: "Work Experience", "Education", "Certifications"</li>
+        <li><div class="check-box"></div>Remove graphics, icons, photos, and colored backgrounds</li>
+        <li><div class="check-box"></div>Use standard fonts: Calibri, Arial, Times New Roman, or Georgia</li>
+      </ul>
+      <div class="tip">
+        <strong>Quick test:</strong> Copy and paste your resume into Notepad. If it looks scrambled or loses formatting, an ATS will have trouble reading it.
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div class="step-title">
+        <p>Step Two</p>
+        <h2>Add the Right Healthcare Keywords</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>ATS systems search for specific keywords from the job description. If your resume doesn't include them, it gets filtered out — even if you have the experience.</p>
+      <div class="keywords-grid">
+        <div class="kw-group">
+          <h4>Clinical Skills</h4>
+          <ul>
+            <li>Patient assessment</li>
+            <li>Medication administration</li>
+            <li>Vital signs monitoring</li>
+            <li>IV insertion / IV therapy</li>
+            <li>Wound care</li>
+            <li>Patient education</li>
+          </ul>
+        </div>
+        <div class="kw-group">
+          <h4>Compliance & Systems</h4>
+          <ul>
+            <li>HIPAA compliance</li>
+            <li>EMR / EHR systems</li>
+            <li>Epic, Cerner, Meditech</li>
+            <li>OSHA standards</li>
+            <li>BLS / ACLS certified</li>
+            <li>Joint Commission</li>
+          </ul>
+        </div>
+        <div class="kw-group">
+          <h4>Soft Skills (ATS-friendly)</h4>
+          <ul>
+            <li>Team collaboration</li>
+            <li>Critical thinking</li>
+            <li>Care coordination</li>
+            <li>Patient advocacy</li>
+            <li>Clinical documentation</li>
+            <li>Time management</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tip" style="margin-top:16px;">
+        <strong>Pro tip:</strong> Copy 3-5 keywords from the exact job posting and add them naturally to your resume. ATS systems compare your resume to the job description word by word.
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <div class="step-title">
+        <p>Step Three</p>
+        <h2>Customize for Every Job</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Sending the same resume to every employer is one of the most common mistakes. Each job posting has slightly different requirements — your resume needs to match each one.</p>
+      <ul class="checklist">
+        <li><div class="check-box"></div>Read the job description carefully and highlight key requirements</li>
+        <li><div class="check-box"></div>Match your resume summary to the specific role (RN, CNA, MA, Healthcare Admin)</li>
+        <li><div class="check-box"></div>Use the same job title from the posting in your resume header or summary</li>
+        <li><div class="check-box"></div>Add 3-5 keywords from the posting that aren't already in your resume</li>
+        <li><div class="check-box"></div>Adjust your top 3 bullet points to match the role's main responsibilities</li>
+      </ul>
+      <div class="tip">
+        <strong>Time-saving tip:</strong> Keep a "master resume" with everything included, then create a shorter customized version for each application. This takes 10-15 minutes per job — not hours.
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">4</div>
+      <div class="step-title">
+        <p>Step Four</p>
+        <h2>Write a Strong Professional Summary</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Your professional summary is the first thing both ATS and recruiters read. It needs to include your role, years of experience, top skills, and 2-3 relevant keywords — in 3-4 sentences.</p>
+      <ul class="checklist">
+        <li><div class="check-box"></div>Start with your title and years of experience: "Registered Nurse with 5+ years of experience..."</li>
+        <li><div class="check-box"></div>Include 2-3 clinical keywords from the job posting</li>
+        <li><div class="check-box"></div>Mention your specialization (ICU, med-surg, pediatrics, etc.)</li>
+        <li><div class="check-box"></div>End with what you bring to the team or your career goal</li>
+      </ul>
+      <div class="tip">
+        <strong>Example:</strong> "Registered Nurse with 6+ years of experience in critical care and med-surg environments. Proficient in patient assessment, medication administration, and EMR documentation using Epic. ACLS and BLS certified. Committed to delivering compassionate, high-quality patient care in fast-paced hospital settings."
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">5</div>
+      <div class="step-title">
+        <p>Step Five</p>
+        <h2>Before You Send — Final Review</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Before submitting any application, run through this final checklist. These small details are often overlooked but can make the difference between a callback and silence.</p>
+      <ul class="checklist">
+        <li><div class="check-box"></div>Spell-check everything — typos are instant disqualifiers</li>
+        <li><div class="check-box"></div>Check that your contact info (email, phone, LinkedIn URL) is correct and current</li>
+        <li><div class="check-box"></div>Make sure all dates are consistent and there are no unexplained gaps</li>
+        <li><div class="check-box"></div>Confirm your certifications are listed with expiration dates where applicable</li>
+        <li><div class="check-box"></div>Verify the file name is professional: "FirstName_LastName_RN_Resume.pdf"</li>
+        <li><div class="check-box"></div>Read it out loud once — this catches awkward phrasing your eyes skip over</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BONUS -->
+  <div class="bonus">
+    <h3>Bonus: Your LinkedIn Profile Matters Too</h3>
+    <p>Many US healthcare recruiters search LinkedIn before they even post a job. Here are the 4 changes that make the biggest difference:</p>
+    <ul class="linkedin-tips">
+      <li>Add your exact job title in your headline (e.g., "Registered Nurse | ICU | ACLS Certified") — this is what recruiters search for</li>
+      <li>Write an "About" section of at least 200 words that includes your top 5 clinical keywords</li>
+      <li>Upload a professional photo — profiles with photos receive 21x more views</li>
+      <li>Turn on "Open to Work" in your settings so recruiters can find you even if you haven't applied</li>
+    </ul>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h2>Ready to Go Further?</h2>
+    <p>This checklist is just the beginning. The HelyraSpring Healthcare Career Kit gives you 8 professional tools — ready to use immediately.</p>
+    <div class="resources">
+      <div class="resource-item">ATS Resume Template 01 — Minimal</div>
+      <div class="resource-item">ATS Resume Template 02 — Professional</div>
+      <div class="resource-item">Cover Letter Template 01 — Clean</div>
+      <div class="resource-item">Cover Letter Template 02 — Modern</div>
+      <div class="resource-item">LinkedIn Optimization Guide</div>
+      <div class="resource-item">Healthcare ATS Keywords Guide</div>
+      <div class="resource-item">AI Prompt Library (12 prompts)</div>
+      <div class="resource-item">Job Application Tracker</div>
+    </div>
+    <a href="https://pay.hotmart.com/F106065397K" class="btn-cta">Get the Full Kit — $47 →</a>
+    <p class="cta-note">One-time payment · Instant download · 30-day money-back guarantee</p>
+  </div>
+
+  <button class="print-btn" onclick="window.print()">Save as PDF (Ctrl+P)</button>
+
+</div>
+
+<footer>&copy; 2026 HelyraSpring · Free resource for healthcare workers</footer>
+
+</body>
+</html>
