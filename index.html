@@ -593,9 +593,9 @@
     } catch (_) {}
 
     // 2. Systeme.io — secondary, non-blocking
-    fetch('https://api.systeme.io/api/contacts', {
+    fetch('https://sparkling-mountain-5769.kalixedesings.workers.dev/', {
       method:  'POST',
-      headers: { 'X-API-Key': '4dvhuy07dn9pmj22r6gy2fagcfuutgjzz7ofr2v2jo0zsygjvpupsftn6qmzgjjg', 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, firstName, tags: [{ name: 'helyraspring-quiz' }] })
     }).catch(() => {});
 
